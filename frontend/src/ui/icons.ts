@@ -1,0 +1,31 @@
+const paths: Record<string, string> = {
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/>',
+  moon: '<path d="M20.5 14A9 9 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/>',
+  home: '<path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-8h6v8"/>',
+  heart: '<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/>',
+  compass: '<circle cx="12" cy="12" r="9"/><path d="m16 8-3 5-5 3 3-5z"/>',
+  settings: '<path d="m9 3-.5 3-2 .9-2.8-1-2 3.5 2.4 1.8v2L1.7 15l2 3.5 2.8-1 2 .9L9 21h4l.5-2.6 2-.9 2.8 1 2-3.5-2.4-1.8v-2l2.4-1.8-2-3.5-2.8 1-2-.9L13 3z"/><circle cx="11" cy="12" r="3"/>',
+  headphones: '<path d="M4 14V11a8 8 0 0 1 16 0v3M4 12H2v8h5v-8zM20 12h2v8h-5v-8z"/>',
+  wave: '<path d="M3 10v4M7 6v12M12 2v20M17 6v12M21 10v4"/>',
+  music: '<path d="M9 18V5l12-2v13M9 9l12-2"/><ellipse cx="6" cy="18" rx="3" ry="3"/><ellipse cx="18" cy="16" rx="3" ry="3"/>',
+  search: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
+  play: '<path d="m8 5 11 7-11 7z"/>',
+  pause: '<path d="M8 5v14M16 5v14"/>',
+  next: '<path d="m5 5 11 7-11 7zM19 5v14"/>',
+  prev: '<path d="m19 5-11 7 11 7zM5 5v14"/>',
+  upload: '<path d="M12 16V3m-5 5 5-5 5 5M4 16v5h16v-5"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  trash: '<path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"/>',
+  shuffle: '<path d="m18 3 3 3-3 3M3 6h3c6 0 6 12 12 12h3m-3-3 3 3-3 3M3 18h3c3 0 5-3 6-6s3-6 6-6h3"/>',
+  repeat: '<path d="m17 2 4 4-4 4M3 11V8a2 2 0 0 1 2-2h16M7 22l-4-4 4-4m14-3v5a2 2 0 0 1-2 2H3"/>',
+  volume: '<path d="m11 4-6 5H2v6h3l6 5zM15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/>',
+  list: '<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>',
+  up: '<path d="m6 15 6-6 6 6"/>',
+  down: '<path d="m6 9 6 6 6-6"/>',
+  close: '<path d="m6 6 12 12M6 18 18 6"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c6 6 6 12 0 18-6-6-6-12 0-18"/>',
+  disc: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="M12 6a6 6 0 0 0-6 6m6 6a6 6 0 0 0 6-6"/>',
+};
+export function icon(name: string): string {
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] ?? paths.music}</svg>`;
+}
