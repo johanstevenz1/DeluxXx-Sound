@@ -1,0 +1,12 @@
+.git/
+.vercel/
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/dist/
+.runtime/
+.env
+.env.*
+**/*auth*.json
+*.log

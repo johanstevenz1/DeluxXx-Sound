@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.log
+.env
+*auth*.json
+
+.runtime/
+
+.vercel/
+.env.*
+!.env.example
